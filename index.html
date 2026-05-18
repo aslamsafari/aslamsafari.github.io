@@ -3,327 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Academic profile and research website for Aslam Safari, researcher and lecturer.">
-  <title>Aslam Safari | Researcher & Lecturer</title>
+  <meta name="description" content="Academic profile of Dr. Muhammad Aslam Mohd Safari, Senior Lecturer in Statistics at Universiti Putra Malaysia.">
+  <title>Dr. Muhammad Aslam Mohd Safari | Statistics Researcher & Lecturer</title>
   <style>
-    :root {
-      color-scheme: light;
-      --ink: #1f2328;
-      --muted: #59636e;
-      --line: #d8dee4;
-      --surface: #ffffff;
-      --accent: #0969da;
-      --accent-deep: #0a3069;
-      --page: #f6f8fa;
-      --mark: #fff4ce;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--ink);
-      background: var(--page);
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-
-    .wrap {
-      width: min(100% - 32px, 1080px);
-      margin: 0 auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(246, 248, 250, 0.94);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(12px);
-    }
-
-    .nav {
-      min-height: 68px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      font-weight: 800;
-      letter-spacing: 0;
-      color: var(--ink);
-      text-decoration: none;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: var(--muted);
-      font-size: 0.94rem;
-      text-decoration: none;
-    }
-
-    nav a:hover,
-    nav a:focus-visible {
-      color: var(--ink);
-    }
-
-    main {
-      padding-bottom: 56px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
-      gap: 44px;
-      align-items: center;
-      padding: 76px 0 48px;
-    }
-
-    .eyebrow {
-      margin: 0 0 18px;
-      color: var(--accent-deep);
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      margin: 0;
-      max-width: 780px;
-      font-size: clamp(2.8rem, 7.5vw, 5.9rem);
-      line-height: 0.96;
-      letter-spacing: 0;
-    }
-
-    .lead {
-      margin: 24px 0 0;
-      max-width: 720px;
-      color: var(--muted);
-      font-size: clamp(1.08rem, 2.2vw, 1.3rem);
-      line-height: 1.65;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
-    }
-
-    .button {
-      min-height: 44px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 18px;
-      border: 1px solid var(--accent);
-      border-radius: 6px;
-      background: var(--accent);
-      color: #ffffff;
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .button.secondary {
-      background: var(--surface);
-      color: var(--accent);
-    }
-
-    .profile-card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 24px;
-      box-shadow: 0 16px 40px rgba(31, 35, 40, 0.08);
-    }
-
-    .portrait {
-      width: 100%;
-      aspect-ratio: 1;
-      display: grid;
-      place-items: center;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #dbeafe, #fef3c7);
-      color: var(--accent-deep);
-      font-size: clamp(4rem, 12vw, 7rem);
-      font-weight: 900;
-    }
-
-    .profile-card dl {
-      display: grid;
-      gap: 14px;
-      margin: 22px 0 0;
-    }
-
-    .profile-card div {
-      display: grid;
-      gap: 4px;
-    }
-
-    dt {
-      color: var(--muted);
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    dd {
-      margin: 0;
-      line-height: 1.45;
-    }
-
-    .section {
-      padding: 44px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: 260px minmax(0, 1fr);
-      gap: 36px;
-      align-items: start;
-    }
-
-    h2 {
-      margin: 0;
-      color: var(--accent-deep);
-      font-size: 1rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .content {
-      display: grid;
-      gap: 20px;
-    }
-
-    p {
-      margin: 0;
-      line-height: 1.7;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .item {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 20px;
-    }
-
-    .item h3 {
-      margin: 0 0 10px;
-      font-size: 1.05rem;
-      letter-spacing: 0;
-    }
-
-    .item p,
-    .item li {
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    li + li {
-      margin-top: 10px;
-    }
-
-    .publication {
-      padding: 18px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .publication:first-child {
-      border-top: 0;
-      padding-top: 0;
-    }
-
-    .publication strong {
-      display: block;
-      margin-bottom: 6px;
-    }
-
-    .note {
-      display: inline;
-      background: var(--mark);
-      box-decoration-break: clone;
-      -webkit-box-decoration-break: clone;
-      padding: 0 4px;
-    }
-
-    footer {
-      padding: 30px 0;
-      color: var(--muted);
-      border-top: 1px solid var(--line);
-      font-size: 0.92rem;
-    }
-
-    @media (max-width: 860px) {
-      .hero,
-      .section-head {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 48px;
-      }
-
-      .profile-card {
-        max-width: 440px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 16px 0;
-      }
-
-      nav {
-        justify-content: flex-start;
-      }
-    }
+    :root { color-scheme: light; --ink: #1f2328; --muted: #59636e; --line: #d8dee4; --surface: #ffffff; --accent: #0969da; --accent-deep: #0a3069; --page: #f6f8fa; --mark: #fff4ce; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: var(--page); }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .wrap { width: min(100% - 32px, 1120px); margin: 0 auto; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(246, 248, 250, 0.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
+    .nav { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 800; letter-spacing: 0; color: var(--ink); text-decoration: none; }
+    nav { display: flex; align-items: center; justify-content: flex-end; gap: 16px; flex-wrap: wrap; }
+    nav a { color: var(--muted); font-size: 0.94rem; text-decoration: none; }
+    nav a:hover, nav a:focus-visible { color: var(--ink); }
+    main { padding-bottom: 56px; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr); gap: 44px; align-items: center; padding: 76px 0 48px; }
+    .eyebrow { margin: 0 0 18px; color: var(--accent-deep); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+    h1 { margin: 0; max-width: 840px; font-size: clamp(2.55rem, 6.6vw, 5.5rem); line-height: 0.98; letter-spacing: 0; }
+    .lead { margin: 24px 0 0; max-width: 760px; color: var(--muted); font-size: clamp(1.08rem, 2.2vw, 1.3rem); line-height: 1.65; }
+    .actions, .links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .actions { margin-top: 30px; }
+    .button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0 18px; border: 1px solid var(--accent); border-radius: 6px; background: var(--accent); color: #ffffff; font-weight: 800; text-decoration: none; }
+    .button.secondary, .pill { background: var(--surface); color: var(--accent); }
+    .pill { display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 0.92rem; }
+    .profile-card, .item { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+    .profile-card { padding: 24px; box-shadow: 0 16px 40px rgba(31, 35, 40, 0.08); }
+    .portrait { width: 100%; aspect-ratio: 1; display: grid; place-items: center; border-radius: 8px; background: linear-gradient(135deg, #dbeafe, #fef3c7); color: var(--accent-deep); font-size: clamp(4rem, 12vw, 7rem); font-weight: 900; }
+    .profile-card dl { display: grid; gap: 14px; margin: 22px 0 0; }
+    .profile-card div { display: grid; gap: 4px; }
+    dt { color: var(--muted); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+    dd { margin: 0; line-height: 1.45; }
+    .section { padding: 44px 0; border-top: 1px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 36px; align-items: start; }
+    h2 { margin: 0; color: var(--accent-deep); font-size: 1rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .content { display: grid; gap: 20px; }
+    p { margin: 0; line-height: 1.7; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .item { padding: 20px; }
+    .item h3 { margin: 0 0 10px; font-size: 1.05rem; letter-spacing: 0; }
+    .item p, .item li, .publication p { color: var(--muted); line-height: 1.6; }
+    ul { margin: 0; padding-left: 20px; }
+    li + li { margin-top: 10px; }
+    .publication { padding: 18px 0; border-top: 1px solid var(--line); }
+    .publication:first-child { border-top: 0; padding-top: 0; }
+    .publication strong { display: block; margin-bottom: 6px; }
+    .note { display: inline; background: var(--mark); box-decoration-break: clone; -webkit-box-decoration-break: clone; padding: 0 4px; }
+    footer { padding: 30px 0; color: var(--muted); border-top: 1px solid var(--line); font-size: 0.92rem; }
+    @media (max-width: 900px) { .hero, .section-head { grid-template-columns: 1fr; } .hero { padding-top: 48px; } .profile-card { max-width: 440px; } .grid { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) { .nav { align-items: flex-start; flex-direction: column; padding: 16px 0; } nav { justify-content: flex-start; } }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap nav">
-      <a class="brand" href="#">Aslam Safari</a>
+      <a class="brand" href="#">Dr. Muhammad Aslam Mohd Safari</a>
       <nav aria-label="Primary navigation">
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
@@ -336,125 +71,77 @@
   <main class="wrap">
     <section class="hero" aria-labelledby="home-title">
       <div>
-        <p class="eyebrow">Researcher & Lecturer</p>
-        <h1 id="home-title">Aslam Safari</h1>
-        <p class="lead">I am building this site as a public academic profile for research, teaching, publications, collaborations, and professional updates.</p>
+        <p class="eyebrow">Senior Lecturer in Statistics</p>
+        <h1 id="home-title">Dr. Muhammad Aslam Mohd Safari</h1>
+        <p class="lead">I am a statistics researcher and lecturer at Universiti Putra Malaysia. My work focuses on robust statistical modelling, extreme value theory, environmental and climate applications, reliability analysis, and income distribution modelling.</p>
         <div class="actions" aria-label="Profile links">
           <a class="button" href="#contact">Contact</a>
-          <a class="button secondary" href="#publications">View Publications</a>
+          <a class="button secondary" href="#publications">Selected Publications</a>
         </div>
       </div>
 
       <aside class="profile-card" aria-label="Profile summary">
         <div class="portrait" aria-hidden="true">AS</div>
         <dl>
-          <div>
-            <dt>Role</dt>
-            <dd>Researcher / Lecturer</dd>
-          </div>
-          <div>
-            <dt>Focus</dt>
-            <dd>Research, teaching, supervision, and academic collaboration</dd>
-          </div>
-          <div>
-            <dt>Location</dt>
-            <dd>Add university, department, and country</dd>
-          </div>
+          <div><dt>Current Role</dt><dd>Senior Lecturer, Department of Mathematics and Statistics, Faculty of Science, Universiti Putra Malaysia</dd></div>
+          <div><dt>Field</dt><dd>Statistics; extreme value modelling; robust estimation; environmental statistics</dd></div>
+          <div><dt>Education</dt><dd>PhD Statistics, MSc Statistics, BSc Actuarial Science, Universiti Kebangsaan Malaysia</dd></div>
         </dl>
       </aside>
     </section>
 
-    <section class="section" id="about">
-      <div class="section-head">
-        <h2>About</h2>
-        <div class="content">
-          <p>I am a researcher and lecturer. This website introduces my academic work, research interests, teaching activity, and selected outputs for students, collaborators, institutions, and the wider public.</p>
-          <p><span class="note">Next edit:</span> replace this paragraph with a short biography: your current position, department, university, field, and the kind of research problems you work on.</p>
-        </div>
-      </div>
-    </section>
+    <section class="section" id="about"><div class="section-head"><h2>About</h2><div class="content">
+      <p>Dr. Muhammad Aslam Mohd Safari is a Senior Lecturer in the Department of Mathematics and Statistics, Faculty of Science, Universiti Putra Malaysia. He completed his PhD and MSc in Statistics and his BSc in Actuarial Science at Universiti Kebangsaan Malaysia.</p>
+      <p>His research develops and applies statistical models for complex real-world data, particularly where extremes, outliers, heavy tails, uncertainty, and environmental risk are central to the analysis.</p>
+      <p><span class="note">Profile note:</span> this page is based on the currently available CV and public academic links, and can be updated as new publications, roles, grants, and teaching activities are added.</p>
+    </div></div></section>
 
-    <section class="section" id="research">
-      <div class="section-head">
-        <h2>Research</h2>
-        <div class="content">
-          <div class="grid">
-            <article class="item">
-              <h3>Research Area One</h3>
-              <p>Describe your main research theme, methods, and why it matters.</p>
-            </article>
-            <article class="item">
-              <h3>Research Area Two</h3>
-              <p>Add a second theme, project, laboratory interest, or interdisciplinary focus.</p>
-            </article>
-            <article class="item">
-              <h3>Collaboration</h3>
-              <p>Invite academic, industry, or student collaboration in clear terms.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="section" id="research"><div class="section-head"><h2>Research</h2><div class="content"><div class="grid">
+      <article class="item"><h3>Extreme Value Modelling</h3><p>Statistical modelling of extreme wind speeds, temperatures, air pollution episodes, and tail behaviour in environmental and climate data.</p></article>
+      <article class="item"><h3>Robust Statistical Estimation</h3><p>Robust estimation methods for Weibull, Pareto-type, Lindley, and related distributions under outliers and heavy-tailed data.</p></article>
+      <article class="item"><h3>Applied Statistical Modelling</h3><p>Applications in income distribution and inequality, reliability analysis, air quality risk, wind energy assessment, and interdisciplinary data analysis.</p></article>
+    </div></div></div></section>
 
-    <section class="section" id="publications">
-      <div class="section-head">
-        <h2>Publications</h2>
-        <div class="content">
-          <article class="publication">
-            <strong>Selected publication title goes here</strong>
-            <p>Authors. Journal or conference name, year. Add DOI, PDF, or publisher link when available.</p>
-          </article>
-          <article class="publication">
-            <strong>Selected publication title goes here</strong>
-            <p>Authors. Journal or conference name, year. Add DOI, PDF, or publisher link when available.</p>
-          </article>
-          <article class="publication">
-            <strong>Selected publication title goes here</strong>
-            <p>Authors. Journal or conference name, year. Add DOI, PDF, or publisher link when available.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <section class="section" id="appointments"><div class="section-head"><h2>Experience</h2><div class="content"><div class="grid">
+      <article class="item"><h3>Universiti Putra Malaysia</h3><p>Senior Lecturer, Department of Mathematics and Statistics, Faculty of Science. Appointed in 2021.</p></article>
+      <article class="item"><h3>JSPS Postdoctoral Fellowship</h3><p>Postdoctoral Research Fellow at the Meteorological Research Institute, Japan Meteorological Agency, supported by the Japan Society for the Promotion of Science, 2024-2025.</p></article>
+      <article class="item"><h3>Previous Academic Roles</h3><p>Research and teaching appointments at Universiti Kebangsaan Malaysia and Universiti Malaya before joining UPM.</p></article>
+    </div></div></div></section>
 
-    <section class="section" id="teaching">
-      <div class="section-head">
-        <h2>Teaching</h2>
-        <div class="content">
-          <div class="grid">
-            <article class="item">
-              <h3>Courses</h3>
-              <ul>
-                <li>Course title, level, university</li>
-                <li>Course title, level, university</li>
-              </ul>
-            </article>
-            <article class="item">
-              <h3>Supervision</h3>
-              <p>Add thesis supervision, student projects, mentoring, or research group information.</p>
-            </article>
-            <article class="item">
-              <h3>Resources</h3>
-              <p>Link lecture notes, slides, datasets, code repositories, or reading lists.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="section" id="publications"><div class="section-head"><h2>Publications</h2><div class="content">
+      <article class="publication"><strong>Robust fitting of generalized extreme value distribution for extreme wind speeds: a case study using d4PDF data in Japan</strong><p>Safari, M. A. M., Nakaegawa, T., &amp; Masseran, N. Environmental and Ecological Statistics, 2026.</p></article>
+      <article class="publication"><strong>Robust estimation of the three parameter Weibull distribution for addressing outliers in reliability analysis</strong><p>Safari, M. A. M., Masseran, N., Majid, M. H. A., &amp; Tajuddin, R. R. M. Scientific Reports, 2025.</p></article>
+      <article class="publication"><strong>Stationary and nonstationary extreme value modeling of maximum temperatures in Peninsular Malaysia using different reanalysis datasets</strong><p>Chua, H. Q., &amp; Safari, M. A. M. Theoretical and Applied Climatology, 2025.</p></article>
+      <article class="publication"><strong>Robust estimation techniques for the tail index of the new Pareto-type distribution</strong><p>Safari, M. A. M., &amp; Masseran, N. Empirical Economics, 2024.</p></article>
+      <article class="publication"><strong>Wind energy potential assessment using Weibull distribution with various numerical estimation methods</strong><p>Safari, M. A. M., Masseran, N., &amp; Majid, M. H. A. Theoretical and Applied Climatology, 2022.</p></article>
+      <article class="publication"><strong>Measuring income inequality: A robust semi-parametric approach</strong><p>Safari, M. A. M., Masseran, N., Ibrahim, K., &amp; Hussain, S. I. Physica A, 2021.</p></article>
+      <div class="links" aria-label="Academic profile links"><a class="pill" href="https://scholar.google.com/citations?hl=en&amp;user=_j64YesAAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google Scholar</a><a class="pill" href="https://www.researchgate.net/profile/Aslam-Safari">ResearchGate</a><a class="pill" href="https://www.scopus.com/authid/detail.uri?authorId=57195637603">Scopus</a></div>
+    </div></div></section>
 
-    <section class="section" id="contact">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <div class="content">
-          <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
-          <p>GitHub: <a href="https://github.com/aslamsafari">github.com/aslamsafari</a></p>
-          <p>Academic profiles: add Google Scholar, ORCID, ResearchGate, LinkedIn, or university profile links.</p>
-        </div>
-      </div>
-    </section>
+    <section class="section" id="projects"><div class="section-head"><h2>Projects</h2><div class="content"><div class="grid">
+      <article class="item"><h3>Income Distribution Modelling</h3><p>Project leader for FRGS research on robust composite models for income distribution in Malaysia.</p></article>
+      <article class="item"><h3>Wind Speed and Wind Power</h3><p>Project leader for UPM-funded research on robust Weibull parameter estimation with applications to wind speed and wind power.</p></article>
+      <article class="item"><h3>Interdisciplinary Statistics</h3><p>Project member in research involving nanofluid heat transfer, income class modelling, and applied statistical methods.</p></article>
+    </div></div></div></section>
+
+    <section class="section" id="teaching"><div class="section-head"><h2>Teaching</h2><div class="content">
+      <p>Teaching and supervision information can be expanded here with current courses, postgraduate supervision, student projects, lecture materials, and research group updates.</p>
+      <div class="grid"><article class="item"><h3>Statistics</h3><p>Course information, lecture materials, and student resources can be listed here.</p></article><article class="item"><h3>Supervision</h3><p>Add thesis supervision, research topics for students, and collaboration opportunities.</p></article><article class="item"><h3>Software</h3><p>Experience includes R, Tableau, Alteryx, and SPSS.</p></article></div>
+    </div></div></section>
+
+    <section class="section" id="awards"><div class="section-head"><h2>Awards</h2><div class="content"><ul>
+      <li>Anugerah PERSAMA 2020, PhD Thesis Category, Persatuan Sains Matematik Malaysia.</li>
+      <li>Excellent Thesis Award, Faculty of Science and Technology, Universiti Kebangsaan Malaysia, 2019.</li>
+      <li>Outstanding Paper Award, 4th International Conference on Computing, Mathematics and Statistics, 2019.</li>
+    </ul></div></div></section>
+
+    <section class="section" id="contact"><div class="section-head"><h2>Contact</h2><div class="content">
+      <p>Email: <a href="mailto:aslam.safari@upm.edu.my">aslam.safari@upm.edu.my</a></p>
+      <p>Department of Mathematics and Statistics, Faculty of Science, Universiti Putra Malaysia.</p>
+      <div class="links" aria-label="Contact and external links"><a class="pill" href="https://github.com/aslamsafari">GitHub</a><a class="pill" href="https://scholar.google.com/citations?hl=en&amp;user=_j64YesAAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google Scholar</a><a class="pill" href="https://www.researchgate.net/profile/Aslam-Safari">ResearchGate</a><a class="pill" href="https://www.scopus.com/authid/detail.uri?authorId=57195637603">Scopus</a></div>
+    </div></div></section>
   </main>
 
-  <footer>
-    <div class="wrap">Copyright 2026 Aslam Safari. Built with GitHub Pages.</div>
-  </footer>
+  <footer><div class="wrap">Copyright 2026 Dr. Muhammad Aslam Mohd Safari. Built with GitHub Pages.</div></footer>
 </body>
 </html>
