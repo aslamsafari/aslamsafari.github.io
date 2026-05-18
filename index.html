@@ -3,62 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal website for Aslam Safari.">
-  <title>Aslam Safari</title>
+  <meta name="description" content="Academic profile and research website for Aslam Safari, researcher and lecturer.">
+  <title>Aslam Safari | Researcher & Lecturer</title>
   <style>
     :root {
       color-scheme: light;
-      --ink: #202124;
-      --muted: #5f6368;
-      --line: #dfe3e8;
+      --ink: #1f2328;
+      --muted: #59636e;
+      --line: #d8dee4;
       --surface: #ffffff;
-      --accent: #0b6bcb;
-      --page: #f6f8fb;
+      --accent: #0969da;
+      --accent-deep: #0a3069;
+      --page: #f6f8fa;
+      --mark: #fff4ce;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      min-height: 100vh;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
       background: var(--page);
-    }
-
-    .site {
-      min-height: 100vh;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-    }
-
-    header,
-    main,
-    footer {
-      width: min(100% - 32px, 960px);
-      margin: 0 auto;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 28px 0;
-    }
-
-    .brand {
-      font-weight: 700;
-      letter-spacing: 0;
-    }
-
-    nav {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
     }
 
     a {
@@ -67,10 +39,47 @@
       text-underline-offset: 3px;
     }
 
+    .wrap {
+      width: min(100% - 32px, 1080px);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(246, 248, 250, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
     nav a {
       color: var(--muted);
+      font-size: 0.94rem;
       text-decoration: none;
-      font-size: 0.95rem;
     }
 
     nav a:hover,
@@ -79,62 +88,61 @@
     }
 
     main {
-      display: grid;
-      align-content: center;
-      padding: 48px 0 72px;
+      padding-bottom: 56px;
     }
 
-    .intro {
+    .hero {
       display: grid;
-      gap: 28px;
-      padding: 56px 0;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+      grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+      gap: 44px;
+      align-items: center;
+      padding: 76px 0 48px;
     }
 
     .eyebrow {
-      margin: 0;
-      color: var(--accent);
-      font-weight: 700;
-      text-transform: uppercase;
+      margin: 0 0 18px;
+      color: var(--accent-deep);
       font-size: 0.78rem;
+      font-weight: 800;
       letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
     h1 {
       margin: 0;
       max-width: 780px;
-      font-size: clamp(2.7rem, 8vw, 6.2rem);
-      line-height: 0.95;
+      font-size: clamp(2.8rem, 7.5vw, 5.9rem);
+      line-height: 0.96;
       letter-spacing: 0;
     }
 
-    .summary {
-      margin: 0;
-      max-width: 680px;
+    .lead {
+      margin: 24px 0 0;
+      max-width: 720px;
       color: var(--muted);
-      font-size: clamp(1.08rem, 2.6vw, 1.35rem);
-      line-height: 1.6;
+      font-size: clamp(1.08rem, 2.2vw, 1.3rem);
+      line-height: 1.65;
     }
 
     .actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      margin-top: 30px;
     }
 
     .button {
+      min-height: 44px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 44px;
       padding: 0 18px;
       border: 1px solid var(--accent);
       border-radius: 6px;
       background: var(--accent);
       color: #ffffff;
+      font-weight: 800;
       text-decoration: none;
-      font-weight: 700;
     }
 
     .button.secondary {
@@ -142,98 +150,311 @@
       color: var(--accent);
     }
 
-    .sections {
+    .profile-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 16px 40px rgba(31, 35, 40, 0.08);
+    }
+
+    .portrait {
+      width: 100%;
+      aspect-ratio: 1;
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-      margin-top: 36px;
+      place-items: center;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #dbeafe, #fef3c7);
+      color: var(--accent-deep);
+      font-size: clamp(4rem, 12vw, 7rem);
+      font-weight: 900;
     }
 
-    section {
-      padding-top: 20px;
-      border-top: 2px solid var(--line);
+    .profile-card dl {
+      display: grid;
+      gap: 14px;
+      margin: 22px 0 0;
     }
 
-    h2 {
-      margin: 0 0 10px;
-      font-size: 1rem;
-      letter-spacing: 0;
+    .profile-card div {
+      display: grid;
+      gap: 4px;
     }
 
-    section p {
+    dt {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    dd {
       margin: 0;
-      color: var(--muted);
-      line-height: 1.55;
+      line-height: 1.45;
     }
 
-    footer {
-      padding: 28px 0;
-      color: var(--muted);
-      font-size: 0.92rem;
+    .section {
+      padding: 44px 0;
       border-top: 1px solid var(--line);
     }
 
-    @media (max-width: 720px) {
-      header {
+    .section-head {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 36px;
+      align-items: start;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--accent-deep);
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .content {
+      display: grid;
+      gap: 20px;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .item {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .item h3 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+
+    .item p,
+    .item li {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 10px;
+    }
+
+    .publication {
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .publication:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .publication strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .note {
+      display: inline;
+      background: var(--mark);
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      padding: 0 4px;
+    }
+
+    footer {
+      padding: 30px 0;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero,
+      .section-head {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .profile-card {
+        max-width: 440px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
         align-items: flex-start;
         flex-direction: column;
+        padding: 16px 0;
       }
 
       nav {
         justify-content: flex-start;
       }
-
-      .intro {
-        padding: 40px 0;
-      }
-
-      .sections {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
 <body>
-  <div class="site">
-    <header>
-      <div class="brand">Aslam Safari</div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#">Aslam Safari</a>
       <nav aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="https://github.com/aslamsafari">GitHub</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <div class="intro">
-        <p class="eyebrow">Personal Website</p>
-        <h1>Aslam Safari</h1>
-        <p class="summary">A simple home for projects, notes, and experiments. This site is powered by GitHub Pages and is ready to grow as new work is added.</p>
-        <div class="actions" aria-label="Primary actions">
-          <a class="button" href="https://github.com/aslamsafari">View GitHub</a>
-          <a class="button secondary" href="mailto:hello@example.com">Contact</a>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="home-title">
+      <div>
+        <p class="eyebrow">Researcher & Lecturer</p>
+        <h1 id="home-title">Aslam Safari</h1>
+        <p class="lead">I am building this site as a public academic profile for research, teaching, publications, collaborations, and professional updates.</p>
+        <div class="actions" aria-label="Profile links">
+          <a class="button" href="#contact">Contact</a>
+          <a class="button secondary" href="#publications">View Publications</a>
         </div>
       </div>
 
-      <div class="sections">
-        <section id="work">
-          <h2>Work</h2>
-          <p>Add featured projects, repositories, case studies, or portfolio links here.</p>
-        </section>
-        <section id="about">
-          <h2>About</h2>
-          <p>Share a short bio, current interests, skills, and what you are building next.</p>
-        </section>
-        <section>
-          <h2>Updates</h2>
-          <p>Use this space for announcements, writing, or links to recent experiments.</p>
-        </section>
-      </div>
-    </main>
+      <aside class="profile-card" aria-label="Profile summary">
+        <div class="portrait" aria-hidden="true">AS</div>
+        <dl>
+          <div>
+            <dt>Role</dt>
+            <dd>Researcher / Lecturer</dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>Research, teaching, supervision, and academic collaboration</dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd>Add university, department, and country</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
 
-    <footer>
-      <span>&copy; 2026 Aslam Safari. Built with GitHub Pages.</span>
-    </footer>
-  </div>
+    <section class="section" id="about">
+      <div class="section-head">
+        <h2>About</h2>
+        <div class="content">
+          <p>I am a researcher and lecturer. This website introduces my academic work, research interests, teaching activity, and selected outputs for students, collaborators, institutions, and the wider public.</p>
+          <p><span class="note">Next edit:</span> replace this paragraph with a short biography: your current position, department, university, field, and the kind of research problems you work on.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="section-head">
+        <h2>Research</h2>
+        <div class="content">
+          <div class="grid">
+            <article class="item">
+              <h3>Research Area One</h3>
+              <p>Describe your main research theme, methods, and why it matters.</p>
+            </article>
+            <article class="item">
+              <h3>Research Area Two</h3>
+              <p>Add a second theme, project, laboratory interest, or interdisciplinary focus.</p>
+            </article>
+            <article class="item">
+              <h3>Collaboration</h3>
+              <p>Invite academic, industry, or student collaboration in clear terms.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <div class="section-head">
+        <h2>Publications</h2>
+        <div class="content">
+          <article class="publication">
+            <strong>Selected publication title goes here</strong>
+            <p>Authors. Journal or conference name, year. Add DOI, PDF, or publisher link when available.</p>
+          </article>
+          <article class="publication">
+            <strong>Selected publication title goes here</strong>
+            <p>Authors. Journal or conference name, year. Add DOI, PDF, or publisher link when available.</p>
+          </article>
+          <article class="publication">
+            <strong>Selected publication title goes here</strong>
+            <p>Authors. Journal or conference name, year. Add DOI, PDF, or publisher link when available.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="teaching">
+      <div class="section-head">
+        <h2>Teaching</h2>
+        <div class="content">
+          <div class="grid">
+            <article class="item">
+              <h3>Courses</h3>
+              <ul>
+                <li>Course title, level, university</li>
+                <li>Course title, level, university</li>
+              </ul>
+            </article>
+            <article class="item">
+              <h3>Supervision</h3>
+              <p>Add thesis supervision, student projects, mentoring, or research group information.</p>
+            </article>
+            <article class="item">
+              <h3>Resources</h3>
+              <p>Link lecture notes, slides, datasets, code repositories, or reading lists.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <div class="content">
+          <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+          <p>GitHub: <a href="https://github.com/aslamsafari">github.com/aslamsafari</a></p>
+          <p>Academic profiles: add Google Scholar, ORCID, ResearchGate, LinkedIn, or university profile links.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Copyright 2026 Aslam Safari. Built with GitHub Pages.</div>
+  </footer>
 </body>
 </html>
