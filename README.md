@@ -1,20 +1,24 @@
 # aslamsafari.github.io
 
-Academic website for Aslam Safari, built with GitHub Pages.
+Academic website for Dr. Muhammad Aslam Mohd Safari, Senior Lecturer in Statistics at Universiti Putra Malaysia.
 
 ## Purpose
 
-This site is intended as a public profile for research, teaching, publications, collaborations, and academic contact information.
+This site is a public academic profile for research, teaching, selected publications, projects, awards, collaborations, and contact information.
+
+## Public Profiles
+
+- Google Scholar: https://scholar.google.com/citations?hl=en&user=_j64YesAAAAJ&view_op=list_works&sortby=pubdate
+- ResearchGate: https://www.researchgate.net/profile/Aslam-Safari
+- Scopus: https://www.scopus.com/authid/detail.uri?authorId=57195637603
 
 ## Update Checklist
 
-- Replace the placeholder biography with your real academic bio.
-- Add your university, department, and country.
-- Replace `hello@example.com` with your real email address.
-- Add your research areas.
-- Add selected publications with DOI, PDF, or publisher links.
-- Add teaching, supervision, and student project information.
-- Add Google Scholar, ORCID, ResearchGate, LinkedIn, or university profile links.
+- Add a professional profile photo.
+- Add current courses and supervision topics.
+- Add DOI or publisher links for selected publications.
+- Add ORCID and university profile links if available.
+- Refresh the publication list periodically from Google Scholar, ResearchGate, or Scopus.
 
 The live site is published at:
 
